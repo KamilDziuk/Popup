@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Include an external JavaScript file with the 'defer' attribute -->
+  <script src="script.js" defer></script>
+
+  <!-- Include an external JavaScript library for email functionality -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Initialize the email functionality with a specific API key -->
+  <script type="text/javascript">
+    emailjs.init('FC3a966jC7MSFVaG6')
+  </script>
+
+  <!-- Include an external CSS file for styling -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- Create a button to trigger a popup -->
+  <button id="showPopup">Zapytaj o ofertę</button>
+  
+  <!-- Define a popup container with its content -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <!-- Create a close button for the popup -->
+      <span class="close" id="closePopup">&times;</span>
+      
+      <!-- Create a form for user input -->
+      <form id="form">
+        <!-- Input field for name -->
+        <div class="field">
+          <label for="from_name"></label>
+          <input type="text" name="from_name" id="from_name" placeholder="Imie">
+        </div>
+        
+        <!-- Input field for email -->
+        <div class="field">
+          <label for="email_id"></label>
+          <input type="text" name="email_id" id="email_id" placeholder="E-mail">
+        </div>
+        
+        <!-- Input field for phone number -->
+        <div class="field">
+          <label for="from_name"></label>
+          <input type="text" name="phone" id="phone" placeholder="Telefon">
+        </div>
+        
+        <!-- Input field for message -->
+        <div class="field">
+          <label for="message"></label>
+          <input type="text" name="message" id="message"  placeholder="Dotyczy mieszkania">
+        </div>
+        
+        <!-- Submit button for the form -->
+        <input type="submit" id="button"  value="Wyślij zapytanie dotyczące mieszkania">
+      </form>
+      
+      <!-- Display some text -->
+      <div class="text">
+        Liczba wolnych mieszkań: 82<br><br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
