@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Get references to relevant elements
-    const showPopupButton = document.getElementById('showPopup');
-    const popup = document.getElementById('popup');
-    const closePopupButton = document.getElementById('closePopup');
+    let showPopupButton = document.getElementById('showPopup');
+    let popup = document.getElementById('popup');
+    let closePopupButton = document.getElementById('closePopup');
 
     // Add a click event listener to the "showPopupButton"
     showPopupButton.addEventListener('click', () => {
 
         // Get a reference to an element with the id 'button'
-        const btn = document.getElementById('button');
+        let btn = document.getElementById('button');
 
         // Add a submit event listener to the form
         document.getElementById('form').addEventListener('submit', function (event) {
@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
             btn.value = 'Sending...';
 
             // Define service and template IDs for email sending
-            const serviceID = 'service_6i83c8h';
-            const templateID = 'template_vby05s7';
+            let serviceID = 'service_6i83c8h';
+            let templateID = 'template_vby05s7';
 
             // Use emailjs to send the form data
             emailjs.sendForm(serviceID, templateID, this)
